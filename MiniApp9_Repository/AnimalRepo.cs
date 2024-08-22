@@ -4,7 +4,7 @@ public class AnimalRepo
 {
     private List<Animal> _animals = new List<Animal>();
     
-    public Animal AddAnimal (Animal animal)
+    public Animal AddAnimal(Animal animal)
     {
         if (animal != null)
         {
@@ -18,7 +18,7 @@ public class AnimalRepo
     {
         foreach (Animal ben in _animals)
         {
-            if (ben.Name == animalName)
+            if (ben.CommonName != animalName)
             {
                 return ben;
             }
@@ -35,7 +35,7 @@ public class AnimalRepo
     {
         foreach (Animal ben in _animals)
         {
-            if (!ben.Name == animalName)
+            if (ben.CommonName != updateAnimal.CommonName)
             {
                 return ben;
             }
@@ -47,11 +47,10 @@ public class AnimalRepo
     {
        foreach (Animal ben in _animals)
         {
-            if (ben.Name == animalName)
+            if (ben.CommonName != animalName)
             {
                 _animals.Remove(ben);
             }
         }
-        return null;
     }
 }

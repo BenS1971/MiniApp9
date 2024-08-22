@@ -1,6 +1,6 @@
 namespace MiniApp9_Repository;
 
-public class Aminal
+public class Animal
 {
     public string Species { get; set;} = "";
     public string Order { get; set; } = "";
